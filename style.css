@@ -1,0 +1,248 @@
+@charset "shift_jis";
+
+
+/*基本設定
+----------------------------------------------------------------------------------------
+■テキスト色は「body」内の「color: #afada3;」で設定できます。
+■文字サイズは「font」内の75%部分です。pxなどの指定にしたいなら、12pxとかにしましょう。
+　尚、HP右側はここで設定したサイズの90%になるように設定されています。
+----------------------------------------------------------------------------------------*/
+body {
+	background-color: #afada3;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	background: url(images/bh.png);
+	font: 75%/2 "メイリオ", "ＭＳ Ｐゴシック", Osaka, "ヒラギノ角ゴ Pro W3";
+}
+
+h1,h2,h3,p,ul,li{
+	margin: 0px;
+	padding: 0px;
+}
+
+ul{
+	list-style-type: none;
+}
+
+img {
+	border: none;
+}
+
+p {
+	color: #000000;
+	margin-left:15px;
+    line-height: 25px;
+	margin-bottom: 4px;
+    font-size: 16px;
+	margin-top: -10px;
+}
+
+ti{
+	font-size: 100px;
+}
+
+.large{
+    font-size: 17px;
+}
+
+.medium{
+    font-size: 14px;
+}
+
+.tabbed{
+	font-size:12px;
+    margin-left: 60px;
+}
+
+.collapser{
+    cursor: pointer;
+}
+
+.collapser:hover {
+    color:#0060AF;
+}
+
+.backArrow{
+    background:url('images/backSmall.png');
+    cursor: pointer;
+    background-repeat:no-repeat;
+    width:35px;
+    height:35px;
+	top:90%;
+	left:92%;
+	position:fixed;
+}
+
+/*リンク設定
+----------------------------------------------------------------------------------------
+■aはリンクですよ～という部分の設定。hoverはカーソルオーバー時の設定。
+　下線を外したいなら、a項目内に「text-decoration: none;」を1行追加しましょう。
+----------------------------------------------------------------------------------------*/
+a {
+	color:#444499;
+}
+
+a:hover {
+	color:black;
+}
+
+
+
+/*コンテナー（HP枠の設定で特に変更不要）
+----------------------------------------------------------------------------------------*/
+#container {
+	width: 800px;
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/*ヘッダー（ロゴとh1タグのテキストが入っているトップ部分）
+----------------------------------------------------------------------------------------
+■#headerの「text-align: center;」で中央寄せにしています。左寄せにしたいならcenterでなくleftに。
+■#header h1がh1タグの設定部分。文字サイズを変更したいなら9px部分を変える。
+　文字間隔が広がって見えると思いますが、この設定は「letter-spacing: 0.5em;」部分です。
+　1文字ずつ0.5文字分の余白を空けていってるという意味です。広げたくないなら1行丸ごと削除。
+----------------------------------------------------------------------------------------*/
+#header {
+	background-color: #FDFDFF;
+	background: url(images/kiyomizu.jpg);
+    background-size:120%;
+    background-position:70%;
+	text-align: center;
+	height: 173px;
+    color: #FFFFFF;
+	padding-top: 17px;
+    border: 1px solid #909090;
+}
+
+#header h1 {
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 1em;
+	letter-spacing: 0.4em;
+}
+
+#header h2 {
+	font-size: 35px;
+	font-weight:bold;
+	padding: 105px 0px 0px 516px;
+}
+
+/*コンテンツ（HPの左右のコンテンツ背景を設定しています。ここは変更しない）
+----------------------------------------------------------------------------------------*/
+#contents {
+	background: #FFFFFF url(images/contents_bg.gif);
+}
+
+
+
+/*メイン画像（HP枠との微調整部分。変更しない。）
+----------------------------------------------------------------------------------------*/
+#main-img {
+	margin-left: 5px;
+}
+
+
+
+/*メインコンテンツ（右側コンテンツ。変更不要。）
+----------------------------------------------------------------------------------------*/
+#main {
+    padding-left: 9px;
+	margin-bottom: 9px;
+	margin-top: 5px;
+	text-align: center;
+    color: #000000;
+}
+
+#main h1 {
+	margin-bottom: -10px;
+    margin-top: 3px;
+    margin-left: 5px;
+    font-size: 33px;
+    color:#0080FF;
+}
+
+#main h2 {
+	margin-top: 8px;
+    margin-left: 6px;
+}
+
+#main h3 {
+	margin-top: -12px;
+	margin-bottom: -5px;
+    font-size: 12px;
+}
+
+#main li{
+    margin-left: 70px;
+}
+
+/*サブコンテンツ（左側コンテンツ。）
+----------------------------------------------------------------------------------------
+■#subの「font-size: 90%;」で、メインコンテンツより文字サイズが若干小さくなるよう設定しています。
+　メインコンテンツと同じがいいなら1行丸ごと削除する。
+■#sub h3　はサブコンテンツの見出し部分です。背景の白は「background: #FFFFFF;」で設定しています。
+　中央寄せは「text-align: center;」で設定。文字間隔を「letter-spacing: 0.5em;」で少し広げています。
+　枠のボーダーは「border: 1px dotted #d1d0c8;」部分。1pxの点線(dotted)を#d1d0c8の色で入れています。
+　直線にしたいならdottedをsolidにする。
+----------------------------------------------------------------------------------------*/
+#sub {
+	background-color: #FDFDFF;
+	float: left;
+	display: inline;
+	margin-bottom: 15px;
+	margin-top: 5px;
+	font-size: 25px;
+	margin-top:5px;
+	display: inline;
+	width: 155px;
+	float: left;
+    border: 1px solid #909090;
+}
+
+
+#sub a{
+	color: #858480;
+	display: block;
+	border-left: 8px solid #0080FF;
+    margin-bottom: 1px;
+	padding: 3px 12px;
+	text-decoration: none;
+    height: 40px;
+	text-align: left;
+}
+
+#sub a:hover{
+	color: #454440;
+	border-left: 8px solid #000090;
+	background-color: #EEEEEE;
+}
+
+/* spaceCenter
+----------------------------------------------------------------------------------------*/
+#spaceCenter {
+    background-color:#FDFDFF;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+    height: 100%;
+	padding-top: 10px;
+}
+
+/*フッター（変更不要）
+----------------------------------------------------------------------------------------*/
+#footer {
+	clear: both;
+	width: 100%;
+    background-color:#FDFDFF;
+    border: 1px solid #909090;
+    border-top-color:#0080FF;
+    border-top-style:solid;
+    border-top-width:2px;
+	height: 25px;
+	line-height: 1.5em;
+	text-align: center;
+	padding-top: 10px;
+}
